@@ -236,7 +236,6 @@ client = no
 socket = a:SO_REUSEADDR=1
 socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
-foreground = yes
 
 [dropbear]
 accept = 443
