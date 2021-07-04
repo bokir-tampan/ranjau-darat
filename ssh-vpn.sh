@@ -254,10 +254,6 @@ connect = 127.0.0.1:22
 accept = 442
 connect = 127.0.0.1:1194
 
-[edu-ssl]
-accept = 2053
-connect = 127.0.0.1:445
-
 END
 
 # make a certificate
