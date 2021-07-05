@@ -166,6 +166,11 @@ echo "clear" >> .profile
 echo "neofetch" >> .profile
 echo "echo by BokirTampan" >> .profile
 
+# install python
+apt -y install ruby
+gem install lolcat
+apt -y install figlet
+
 # install webserver
 apt -y install nginx
 cd
