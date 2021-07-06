@@ -166,11 +166,6 @@ echo "clear" >> .profile
 echo "neofetch" >> .profile
 echo "echo by BokirTampan" >> .profile
 
-# install python
-apt -y install ruby
-gem install lolcat
-apt -y install figlet
-
 # install webserver
 apt -y install nginx
 cd
@@ -329,6 +324,11 @@ iptables-save > /etc/iptables.up.rules
 iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
+
+# install python
+apt -y install ruby
+gem install lolcat
+apt -y install figlet
 
 # download script
 cd /usr/bin
