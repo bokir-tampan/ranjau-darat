@@ -70,7 +70,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/bin/python -O /usr/local/bin/edu-ssl 2053
+ExecStart=/usr/bin/python -O /usr/local/bin/edu-ssl 2220
 Restart=on-failure
 
 [Install]
@@ -246,6 +246,9 @@ connect = 127.0.0.1:109
 accept = 777
 connect = 127.0.0.1:22
 
+[dropbear]
+accept = 2220
+connect = 40000
 [openvpn]
 accept = 442
 connect = 127.0.0.1:1194
