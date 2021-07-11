@@ -246,14 +246,6 @@ connect = 127.0.0.1:109
 accept = 777
 connect = 127.0.0.1:22
 
-[dropbear]
-accept = 2220
-connect = 127.0.0.1:40000
-
-[dropbear]
-accept = 444
-connect = 127.0.0.1:44
-
 [openvpn]
 accept = 442
 connect = 127.0.0.1:1194
@@ -269,14 +261,6 @@ cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
 # konfigurasi stunnel
 sed -i 's/ENABLED=0/ENABLED=1/g' /etc/default/stunnel4
 /etc/init.d/stunnel4 restart
-
-# instal sslh untuh ssh ssl
-cd
-apt-get -y install sslh
-
-#configurasi sslh
-wget -O /etc/default/sslh "https://raw.githubusercontent.com/idtunnel/sshtunnel/master/sslh-conf"
-service sslh restart
 
 #install badvpncdn
 wget https://github.com/ambrop72/badvpn/archive/master.zip
