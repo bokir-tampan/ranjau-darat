@@ -53,10 +53,6 @@ systemctl daemon-reload
 systemctl enable edu-proxy
 systemctl restart edu-proxy
 
-# Edu ssl
-wget -q -O /usr/local/bin/edu-ssl https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/cdn-ssl.py
-chmod +x /usr/local/bin/edu-ssl
-
 # Installing Service
 cat > /etc/systemd/system/edu-ssl.service << END
 [Unit]
@@ -166,6 +162,7 @@ apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rs
 echo "clear" >> .profile
 echo "neofetch" >> .profile
 echo "echo by BokirTampan" >> .profile
+echo "echo Ketik \e[1;31m menu\e[0m Untuk Melihat Options" >> .profile
 
 # install webserver
 apt -y install nginx
