@@ -162,7 +162,7 @@ apt-get --reinstall --fix-missing install -y bzip2 gzip coreutils wget screen rs
 echo "clear" >> .profile
 echo "neofetch" >> .profile
 echo "echo by BokirTampan" >> .profile
-echo "echo Ketik \e[1;31m menu\e[0m Untuk Melihat Options" >> .profile
+echo "echo Ketik menu Untuk Melihat Options" >> .profile
 
 # install webserver
 apt -y install nginx
