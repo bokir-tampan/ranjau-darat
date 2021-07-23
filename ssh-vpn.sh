@@ -53,6 +53,10 @@ systemctl daemon-reload
 systemctl enable edu-proxy
 systemctl restart edu-proxy
 
+# Edu OVPN
+wget -q -O /usr/local/bin/edu-ssl https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/edu-ssl.py
+chmod +x /usr/local/bin/edu-ssl
+
 # Installing Service
 cat > /etc/systemd/system/edu-ssl.service << END
 [Unit]
@@ -66,7 +70,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/bin/python -O /usr/local/bin/edu-proxy 2053
+ExecStart=/usr/bin/python -O /usr/local/bin/edu-ssl 700
 Restart=on-failure
 
 [Install]
@@ -74,8 +78,8 @@ WantedBy=multi-user.target
 END
 
 systemctl daemon-reload
-systemctl enable edu-proxy
-systemctl restart edu-proxy
+systemctl enable edu-ssl
+systemctl restart edu-ssl
 
 # Edu OVPN
 wget -q -O /usr/local/bin/edu-ovpn https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/cdn-ovpn.py
@@ -198,7 +202,7 @@ sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
 apt -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=143/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109"/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109 -p 69"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/dropbear restart
@@ -236,7 +240,7 @@ socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
 [dropbear]
-accept = 443
+accept = 445
 connect = 127.0.0.1:109
 
 [dropbear]
@@ -246,6 +250,10 @@ connect = 127.0.0.1:22
 [openvpn]
 accept = 442
 connect = 127.0.0.1:1194
+
+[stunnelws]
+accept = 443
+connect = 700
 
 END
 
