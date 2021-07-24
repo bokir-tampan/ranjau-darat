@@ -283,6 +283,7 @@ wget -q -O /usr/local/bin/edu-ssl https://raw.githubusercontent.com/bokir-tampan
 chmod +x /usr/local/bin/edu-ssl
 
 # Installing Service
+cat > /etc/systemd/system/edu-ssl.service << END
 [Unit]
 Description=SSH Over Websocket Python By Bokir
 Documentation=https://google.com
@@ -299,6 +300,10 @@ ExecStart=/usr/bin/python -O /usr/local/bin/edu-ssl
 
 [Install]
 WantedBy=multi-user.target
+
+systemctl daemon-reload
+systemctl enable edu-ssl
+systemctl restart edu-sll
 
 # Edu OVPN
 wget -q -O /usr/local/bin/edu-ovpn https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/cdn-ovpn.py
