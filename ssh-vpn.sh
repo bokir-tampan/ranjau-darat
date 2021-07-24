@@ -70,7 +70,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/bin/python -O /usr/local/bin/edu-ssl 700
+ExecStart=/usr/bin/python -O /usr/local/bin/edu-ssl
 Restart=on-failure
 
 [Install]
@@ -239,9 +239,13 @@ socket = a:SO_REUSEADDR=1
 socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
+[edussl]
+accept = 443
+connect = 700
+
 [dropbear]
 accept = 445
-connect = 127.0.0.1:109
+connect = 127.0.0.1:22
 
 [dropbear]
 accept = 777
@@ -251,9 +255,7 @@ connect = 127.0.0.1:22
 accept = 442
 connect = 127.0.0.1:1194
 
-[stunnelws]
-accept = 443
-connect = 700
+
 
 END
 
