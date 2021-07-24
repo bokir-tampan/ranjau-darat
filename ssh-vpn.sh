@@ -25,61 +25,6 @@ chmod +x /etc/pam.d/common-password
 
 # go to root
 cd
-# Getting Proxy Template
-wget -q -O /usr/local/bin/edu-proxy https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/cdn.py
-chmod +x /usr/local/bin/edu-proxy
-
-# Installing Service
-cat > /etc/systemd/system/edu-proxy.service << END
-[Unit]
-Description=Python Edu Proxy By BokirTampa
-Documentation=https://red-flat.my.id
-After=network.target nss-lookup.target
-
-[Service]
-Type=simple
-User=root
-CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
-AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
-NoNewPrivileges=true
-ExecStart=/usr/bin/python -O /usr/local/bin/edu-proxy 2095
-Restart=on-failure
-
-[Install]
-WantedBy=multi-user.target
-END
-
-systemctl daemon-reload
-systemctl enable edu-proxy
-systemctl restart edu-proxy
-
-# Edu Ssl
-wget -q -O /usr/local/bin/edu-ssl https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/edu-ssl.py
-chmod +x /usr/local/bin/edu-ssl
-
-# Installing Service
-cat > /etc/systemd/system/edu-ssl.service << END
-[Unit]
-Description=SSH Over Websocket Python By Bokir
-Documentation=https://google.com
-After=network.target nss-lookup.target
-
-[Service]
-Type=simple
-User=root
-CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
-AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
-NoNewPrivileges=true
-Restart=on-failure
-ExecStart=/usr/bin/python -O /usr/local/bin/edu-ssl
-
-[Install]
-WantedBy=multi-user.target
-
-systemctl daemon-reload
-systemctl enable edu-ssl
-systemctl restart edu-sll
-
 # Edu OVPN
 wget -q -O /usr/local/bin/edu-ovpn https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/cdn-ovpn.py
 chmod +x /usr/local/bin/edu-ovpn
