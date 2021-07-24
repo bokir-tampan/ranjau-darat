@@ -14,7 +14,7 @@ exit 0
 fi
 apt install jq curl -y
 DOMAIN=red-flat.my.id
-sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
+read -p "Masukan Subdomain Anda :" sub
 SUB_DOMAIN=${sub}.red-flat.my.id
 CF_ID=wirogendeng980@gmail.com
 CF_KEY=711341f0f37a01e6b1ceaeec976fa3315b455
