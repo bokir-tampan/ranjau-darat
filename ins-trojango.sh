@@ -51,13 +51,14 @@ cat > /etc/trojan-go/config.json << END
 {
   "run_type": "server",
   "local_addr": "0.0.0.0",
-  "local_port": 443,
+  "local_port": 2096,
   "remote_addr": "127.0.0.1",
   "remote_port": 81,
   "log_level": 1,
   "log_file": "/var/log/trojan-go.log",
   "password": [
-    "bokirtampan",
+    "$uuid",
+    "$uuid",
     ""
   ],
   "disable_http_check": false,
@@ -104,7 +105,7 @@ cat > /etc/trojan-go/config.json << END
   },
   "websocket": {
     "enabled": true,
-    "path": "/bokirtampan",
+    "path": "/trojango",
     "host": "$domain"
   },
   "shadowsocks": {
@@ -151,8 +152,8 @@ cat > /etc/trojan-go/config.json << END
 }
 
 END
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 443 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 443 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2096 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2096 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
 iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
