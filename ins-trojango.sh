@@ -57,7 +57,7 @@ cat > /etc/trojan-go/config.json << END
   "log_level": 1,
   "log_file": "/var/log/trojan-go.log",
   "password": [
-    "$user",
+    "bokirtampan",
     ""
   ],
   "disable_http_check": false,
