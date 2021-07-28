@@ -184,7 +184,7 @@ socket = l:TCP_NODELAY=1
 socket = r:TCP_NODELAY=1
 
 [edussl]
-accept = 777
+accept = 443
 connect = 700
 
 [dropbear]
