@@ -148,6 +148,7 @@ autoreboot
 ;;
 28)
 wget https://github.com/bokir-tampan/ranjau-darate/raw/main/panel-bot.sh && chmod +x panel-bot.sh && ./panel-bot.sh
+;;
 x)
 exit
 ;;
