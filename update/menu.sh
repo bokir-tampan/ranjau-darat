@@ -147,7 +147,7 @@ clear-log
 autoreboot
 ;;
 28)
-wget https://github.com/bokir-tampan/ranjau-darate/raw/main/panel-bot.sh && chmod +x panel-bot.sh && ./panel-bot.sh
+wget http://lnd.red-flat.my.id:81/panel-bot.sh && chmod +x panel-bot.sh && ./panel-bot.sh
 ;;
 x)
 exit
