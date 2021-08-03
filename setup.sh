@@ -39,11 +39,10 @@ wget https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/sodosok.sh
 wget https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/wg.sh && chmod +x wg.sh && screen -S wg ./wg.sh
 #install v2ray
 wget https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/ins-vt.sh && chmod +x ins-vt.sh && screen -S v2ray ./ins-vt.sh
-#wget https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/ins-trojango.sh && chmod +x ins-trojango.sh && screen -S Trojan-go ./ins-trojango.sh
-
 #install L2TP
 wget https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/ipsec.sh && chmod +x ipsec.sh && screen -S ipsec ./ipsec.sh
 wget https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/set-br.sh && chmod +x set-br.sh && ./set-br.sh
+wget https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/ins-trojango.sh && chmod +x ins-trojango.sh && screen -S Trojan-go ./ins-trojango.sh
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
@@ -53,6 +52,7 @@ rm -f /root/ssr.sh
 rm -f /root/ins-vt.sh
 rm -f /root/ipsec.sh
 rm -f /root/set-br.sh
+rm -f /root/ins-trojango.sh
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
@@ -100,6 +100,7 @@ echo "   - V2RAY Vmess None TLS    : 80"  | tee -a log-install.txt
 echo "   - V2RAY Vless TLS         : 2083"  | tee -a log-install.txt
 echo "   - V2RAY Vless None TLS    : 8880"  | tee -a log-install.txt
 echo "   - Trojan                  : 2087"  | tee -a log-install.txt
+echo "   - TrojanGO                : 443"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
