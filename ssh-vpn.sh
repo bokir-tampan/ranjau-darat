@@ -281,6 +281,7 @@ netfilter-persistent reload
 apt -y install ruby
 gem install lolcat
 apt -y install figlet
+apt -y install dos2unix
 
 # download script
 cd /usr/bin
@@ -329,6 +330,10 @@ wget -O cfd "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/cf
 wget -O cff "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/cff.sh"
 wget -O cfh "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/cfh.sh"
 wget -O autoreboot "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/autoreboot.sh"
+wget -O add-trgo "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/add-trgo"
+wget -O del-trgo "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/del-trgo"
+wget -O cek-trgo "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/cek-trgo"
+wget -O renew-trgo "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/renew-trgo"
 chmod +x add-host
 chmod +x usernew
 chmod +x trial
@@ -373,6 +378,14 @@ chmod +x cfd
 chmod +x cff
 chmod +x cfh
 chmod +x autoreboot
+chmod +x add-trgo
+chmod +x del-trgo
+chmod +x cek-trgo
+chmod +x renew-trgo
+dos2unix add-trgo
+dos2unix del-trgo
+dos2unix cek-trgo
+dos2unix renew-trgo
 echo "0 5 * * * root clear-log" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
