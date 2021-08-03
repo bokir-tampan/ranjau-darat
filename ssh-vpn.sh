@@ -334,6 +334,7 @@ wget -O add-trgo "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/ma
 wget -O del-trgo "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/del-trgo"
 wget -O cek-trgo "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/cek-trgo"
 wget -O renew-trgo "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/renew-trgo"
+wget -O trojangoo "https://raw.githubusercontent.com/bokir-tampan/ranjau-darate/main/trojangoo.sh"
 chmod +x add-host
 chmod +x usernew
 chmod +x trial
@@ -386,6 +387,7 @@ dos2unix add-trgo
 dos2unix del-trgo
 dos2unix cek-trgo
 dos2unix renew-trgo
+chmod +x trojangoo
 echo "0 5 * * * root clear-log" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
 # remove unnecessary files
