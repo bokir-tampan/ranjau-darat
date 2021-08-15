@@ -59,6 +59,7 @@ echo -e   "   26\e[1;33m)\e[m  Pointing BUG"
 echo -e   "   27\e[1;33m)\e[m  Clear log"
 echo -e   "   28\e[1;33m)\e[m  Auto Reboot"
 echo -e   "   29\e[1;33m)\e[m  Panel-bot"
+echo -e   "   30\e[1;33m)\e[m  Pointing VPS"
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
 echo -e   "   x)   Exit" | lolcat
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
@@ -152,6 +153,9 @@ autoreboot
 ;;
 29)
 wget http://lnd.red-flat.my.id:81/panel-bot.sh && chmod +x panel-bot.sh && ./panel-bot.sh
+;;
+30)
+echo "1" > /proc/sys/net/ipv4/ip_forward; wget -O /usr/bin/point 'https://raw.githubusercontent.com/bokir-tampan/ranjau-darate/main/pointing.sh'; chmod +x /usr/bin/point; point
 ;;
 x)
 exit
