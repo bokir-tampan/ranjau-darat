@@ -155,7 +155,7 @@ autoreboot
 wget http://lnd.red-flat.my.id:81/panel-bot.sh && chmod +x panel-bot.sh && ./panel-bot.sh
 ;;
 30)
-echo "1" > /proc/sys/net/ipv4/ip_forward; wget -O /usr/bin/point 'https://raw.githubusercontent.com/bokir-tampan/ranjau-darate/main/pointing.sh'; chmod +x /usr/bin/point; point
+point
 ;;
 x)
 exit
