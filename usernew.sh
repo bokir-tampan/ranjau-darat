@@ -46,6 +46,7 @@ echo -e "$Pass\n$Pass\n"|passwd $Login &> /dev/null
 echo -e ""
 echo -e "Thank You For Using Our Services"
 echo -e "SSH & OpenVPN Account Info"
+echo -e "Domain         : $domain"
 echo -e "Username       : $Login "
 echo -e "Password       : $Pass"
 echo -e "==============================="
