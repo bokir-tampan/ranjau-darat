@@ -32,6 +32,7 @@ wget https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/cf.sh && c
 wget https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/ssh-vpn.sh && chmod +x ssh-vpn.sh && screen -S ssh-vpn ./ssh-vpn.sh
 wget https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/sstp.sh && chmod +x sstp.sh && screen -S sstp ./sstp.sh
 wget https://raw.githubusercontent.com/bokir-tampan/ranjau-darate/main/weleh.sh && chmod +x weleh.sh && screen -S weleh ./weleh.sh
+wget https://raw.githubusercontent.com/bokir-tampan/ranjau-darate/main/ohp.sh && chmod +x ohp.sh && screen -S ohp ./ohp.sh
 #install ssr
 wget https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/ssr.sh && chmod +x ssr.sh && screen -S ssr ./ssr.sh
 wget https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/sodosok.sh && chmod +x sodosok.sh && screen -S ss ./sodosok.sh
@@ -53,6 +54,8 @@ rm -f /root/ins-vt.sh
 rm -f /root/ipsec.sh
 rm -f /root/set-br.sh
 rm -f /root/ins-trojango.sh
+rm -f /root/weleh.sh
+rm -f /root/ohp.sh
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
