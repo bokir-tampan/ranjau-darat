@@ -26,12 +26,12 @@ logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "https://raw.githubusercontent.com/bokiroke1/project-aw/main/autobackup.sh"
-wget -O backup "https://raw.githubusercontent.com/bokiroke1/project-aw/main/backup.sh"
-wget -O bckp "https://raw.githubusercontent.com/bokiroke1/project-aw/main/bckp.sh"
-wget -O restore "https://raw.githubusercontent.com/bokiroke1/project-aw/main/restore.sh"
-wget -O strt "https://raw.githubusercontent.com/bokiroke1/project-aw/main/strt.sh"
-wget -O limit-speed "https://raw.githubusercontent.com/bokiroke1/project-aw/main/limit-speed.sh"
+wget -O autobackup "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/autobackup.sh"
+wget -O backup "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/backup.sh"
+wget -O bckp "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/bckp.sh"
+wget -O restore "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/restore.sh"
+wget -O strt "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/strt.sh"
+wget -O limit-speed "https://raw.githubusercontent.com/bokir-tampan/ranjau-darat/main/limit-speed.sh"
 chmod +x autobackup
 chmod +x backup
 chmod +x bckp
