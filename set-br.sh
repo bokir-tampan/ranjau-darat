@@ -1,4 +1,3 @@
-
 #!/bin/bash
 curl https://rclone.org/install.sh | bash
 printf "q\n" | rclone config
