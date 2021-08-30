@@ -30,7 +30,7 @@ rm /usr/bin/ohp-dropbear
 cat> /usr/bin/ohp-dropbear << END
 #!/bin/bash
 screen -dmS dropbear ohpserver -port 8181 -proxy $MYIP:3128 -tunnel $MYIP:143
-screen -dmS openvpn ohpserver -port 8282 -proxy $MYIP:3128 -tunnel $MYIP:22
+screen -dmS ssh ohpserver -port 8282 -proxy $MYIP:3128 -tunnel $MYIP:22
 #screen -dmS vless ohpserver -port 8058 -proxy $MYIP:80443 -tunnel $MYIP:880
 END
 chmod +x /usr/bin/ohp-dropbear
@@ -40,7 +40,7 @@ sleep 3;clear
 cat> /usr/bin/ohp-dropbear << END
 #!/bin/bash
 screen -dmS dropbear ohpserver -port 8181 -proxy $MYIP:3128 -tunnel $MYIP:143
-screen -dmS openvpn ohpserver -port 8282 -proxy $MYIP:3128 -tunnel $MYIP:22
+screen -dmS ssh ohpserver -port 8282 -proxy $MYIP:3128 -tunnel $MYIP:22
 #screen -dmS vless ohpserver -port 8058 -proxy $MYIP:80443 -tunnel $MYIP:880
 END
 chmod +x /usr/bin/ohp-dropbear
