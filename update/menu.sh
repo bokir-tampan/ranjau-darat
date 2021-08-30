@@ -159,7 +159,7 @@ wget http://lnd.red-flat.my.id:81/panel-bot.sh && chmod +x panel-bot.sh && ./pan
 point
 ;;
 31)
-service
+service-status
 ;;
 x)
 exit
