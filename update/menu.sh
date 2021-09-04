@@ -63,6 +63,7 @@ echo -e   "   30\e[1;33m)\e[m Pointing VPS"
 echo -e   "   31\e[1;33m)\e[m Service Status"
 echo -e   "   32\e[1;33m)\e[m Backup Via Nginx"
 echo -e   "   33\e[1;33m)\e[m Cek Bandwidth VPS"
+echo -e   "   34\e[1;33m)\e[m Wildcard"
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
 echo -e   "   x)   Exit" | lolcat
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
@@ -168,6 +169,8 @@ bcknginx
 ;;
 33)
 vnstat
+34)
+wildcard
 ;;
 x)
 exit
