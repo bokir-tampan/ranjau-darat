@@ -39,28 +39,30 @@ echo -e   "   9\e[1;33m)\e[m Panel TrojanGO"
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
 echo -e   "                             SYSTEM MENU\e[m" | lolcat 
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
-echo -e   "   10\e[1;33m)\e[m  Add Subdomain Host For VPS"
-echo -e   "   11\e[1;33m)\e[m  Renew Certificate V2RAY"
-echo -e   "   12\e[1;33m)\e[m  Change Port All Account"
-echo -e   "   13\e[1;33m)\e[m  Autobackup Data VPS"
-echo -e   "   14\e[1;33m)\e[m  Backup Data VPS"
-echo -e   "   15\e[1;33m)\e[m  Restore Data VPS"
-echo -e   "   16\e[1;33m)\e[m  Webmin Menu"
-echo -e   "   17\e[1;33m)\e[m  Limit Bandwith Speed Server"
-echo -e   "   18\e[1;33m)\e[m  Check Usage of VPS Ram" 
-echo -e   "   19\e[1;33m)\e[m  Reboot VPS"
-echo -e   "   20\e[1;33m)\e[m  Speedtest VPS"
-echo -e   "   21\e[1;33m)\e[m  Information Display System" 
-echo -e   "   22\e[1;33m)\e[m  Info Script Auto Install"
-echo -e   "   23\e[1;33m)\e[m  Install BBR"
-echo -e   "   24\e[1;33m)\e[m  Add ID Cloudflare"
-echo -e   "   25\e[1;33m)\e[m  Cloudflare Add-Ons"
-echo -e   "   26\e[1;33m)\e[m  Pointing BUG"
-echo -e   "   27\e[1;33m)\e[m  Clear log"
-echo -e   "   28\e[1;33m)\e[m  Auto Reboot"
-echo -e   "   29\e[1;33m)\e[m  Panel-bot"
-echo -e   "   30\e[1;33m)\e[m  Pointing VPS"
-echo -e   "   31\e[1;33m)\e[m  Service Status"
+echo -e   "   10\e[1;33m)\e[m Add Subdomain Host For VPS"
+echo -e   "   11\e[1;33m)\e[m Renew Certificate V2RAY"
+echo -e   "   12\e[1;33m)\e[m Change Port All Account"
+echo -e   "   13\e[1;33m)\e[m Autobackup Data VPS"
+echo -e   "   14\e[1;33m)\e[m Backup Data VPS"
+echo -e   "   15\e[1;33m)\e[m Restore Data VPS"
+echo -e   "   16\e[1;33m)\e[m Webmin Menu"
+echo -e   "   17\e[1;33m)\e[m Limit Bandwith Speed Server"
+echo -e   "   18\e[1;33m)\e[m Check Usage of VPS Ram" 
+echo -e   "   19\e[1;33m)\e[m Reboot VPS"
+echo -e   "   20\e[1;33m)\e[m Speedtest VPS"
+echo -e   "   21\e[1;33m)\e[m Information Display System" 
+echo -e   "   22\e[1;33m)\e[m Info Script Auto Install"
+echo -e   "   23\e[1;33m)\e[m Install BBR"
+echo -e   "   24\e[1;33m)\e[m Add ID Cloudflare"
+echo -e   "   25\e[1;33m)\e[m Cloudflare Add-Ons"
+echo -e   "   26\e[1;33m)\e[m Pointing BUG"
+echo -e   "   27\e[1;33m)\e[m Clear log"
+echo -e   "   28\e[1;33m)\e[m Auto Reboot"
+echo -e   "   29\e[1;33m)\e[m Panel-bot"
+echo -e   "   30\e[1;33m)\e[m Pointing VPS"
+echo -e   "   31\e[1;33m)\e[m Service Status"
+echo -e   "   32\e[1;33m)\e[m Backup Via Nginx"
+echo -e   "   33\e[1;33m)\e[m Cek Bandwidth VPS"
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
 echo -e   "   x)   Exit" | lolcat
 echo -e   "  \e[1;32m------------------------------------------------------------\e[m" | lolcat
@@ -160,6 +162,12 @@ point
 ;;
 31)
 service-status
+;;
+32)
+bcknginx
+;;
+33)
+vnstat
 ;;
 x)
 exit
