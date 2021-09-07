@@ -169,6 +169,7 @@ bcknginx
 ;;
 33)
 vnstat
+;;
 34)
 wget https://raw.githubusercontent.com/bokir-tampan/ranjau-darate/main/wildcard.sh; chmod +x wildcard.sh; ./wildcard.sh; rm -f wildcard.sh
 ;;
