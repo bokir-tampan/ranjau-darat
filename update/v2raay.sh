@@ -21,6 +21,7 @@ echo -e " 1\e[1;33m)\e[m  Create Vmess Websocket Account"
 echo -e " 2\e[1;33m)\e[m  Delete Vmess Websocket Account"
 echo -e " 3\e[1;33m)\e[m  Renew Vmess Account"
 echo -e " 4\e[1;33m)\e[m  Check User Login Vmess"
+echo -e " 5\e[1;33m)\e[m  Check User Log Vmess"
 echo -e ""
 echo -e "\e[1;32m══════════════════════════════════════════\e[m" | lolcat
 echo -e " x)   MENU"
@@ -40,6 +41,9 @@ renew-ws
 ;;
 4)
 cek-ws
+;;
+5)
+log-ws
 ;;
 x)
 menu
