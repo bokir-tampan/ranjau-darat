@@ -127,7 +127,7 @@ echo -e ""
 read -p " Select menu : " opt
 echo -e ""
 case $opt in
-1) clear ; menu-ssh ;;
+1) clear ; ssh ;;
 2) clear ; wgr;;
 3) clear ; ssssr;;
 4) clear ; l2tp ;;
